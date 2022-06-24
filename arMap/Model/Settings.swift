@@ -1,8 +1,8 @@
 //
 //  Settings.swift
-//  ARCLDemo
+//  arMap
 //
-//  Created by Miron Rogovets on 17.05.2021.
+//  Created by Kris on 6/24/22.
 //
 
 import Foundation

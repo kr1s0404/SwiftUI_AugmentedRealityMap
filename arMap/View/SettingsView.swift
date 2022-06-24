@@ -1,8 +1,8 @@
 //
 //  SettingsGrid.swift
-//  ARCLDemo
+//  arMap
 //
-//  Created by Miron Rogovets on 17.05.2021.
+//  Created by Kris on 6/24/22.
 //
 
 import SwiftUI
@@ -47,7 +47,7 @@ struct SettingsGrid: View {
                 
                 SliderControl(label: "Distance Filter", value: $arSessionManager.distanceFilterValue)
                     .frame(maxWidth: 350)
-                    
+                
                 
                 Separator()
                 

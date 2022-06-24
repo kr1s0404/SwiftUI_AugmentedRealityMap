@@ -31,13 +31,14 @@
 		2F49941C2865275B00CEB5D0 /* CLLocationCoordinate+description.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F49941B2865275B00CEB5D0 /* CLLocationCoordinate+description.swift */; };
 		2F49941E2865279100CEB5D0 /* Transform+helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F49941D2865279100CEB5D0 /* Transform+helpers.swift */; };
 		2F49942028652ABA00CEB5D0 /* Slider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F49941F28652ABA00CEB5D0 /* Slider.swift */; };
-		2F49942228652AC500CEB5D0 /* SettingsGrid.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F49942128652AC500CEB5D0 /* SettingsGrid.swift */; };
+		2F49942228652AC500CEB5D0 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F49942128652AC500CEB5D0 /* SettingsView.swift */; };
 		2F49942428652AED00CEB5D0 /* Separator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F49942328652AEC00CEB5D0 /* Separator.swift */; };
 		2F49942628652AFE00CEB5D0 /* SettingsToggleButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F49942528652AFE00CEB5D0 /* SettingsToggleButton.swift */; };
 		2F49942828652B6000CEB5D0 /* ARControls.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F49942728652B6000CEB5D0 /* ARControls.swift */; };
 		2F49942A28652B7000CEB5D0 /* SystemIconButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F49942928652B7000CEB5D0 /* SystemIconButton.swift */; };
 		2F49942C28652BB500CEB5D0 /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F49942B28652BB500CEB5D0 /* Settings.swift */; };
 		2F49942E28652BF600CEB5D0 /* Color+system.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F49942D28652BF600CEB5D0 /* Color+system.swift */; };
+		2F49943A28653E3600CEB5D0 /* ARViewContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F49943928653E3600CEB5D0 /* ARViewContainer.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -64,13 +65,14 @@
 		2F49941B2865275B00CEB5D0 /* CLLocationCoordinate+description.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CLLocationCoordinate+description.swift"; sourceTree = "<group>"; };
 		2F49941D2865279100CEB5D0 /* Transform+helpers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Transform+helpers.swift"; sourceTree = "<group>"; };
 		2F49941F28652ABA00CEB5D0 /* Slider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Slider.swift; sourceTree = "<group>"; };
-		2F49942128652AC500CEB5D0 /* SettingsGrid.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsGrid.swift; sourceTree = "<group>"; };
+		2F49942128652AC500CEB5D0 /* SettingsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		2F49942328652AEC00CEB5D0 /* Separator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Separator.swift; sourceTree = "<group>"; };
 		2F49942528652AFE00CEB5D0 /* SettingsToggleButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsToggleButton.swift; sourceTree = "<group>"; };
 		2F49942728652B6000CEB5D0 /* ARControls.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ARControls.swift; sourceTree = "<group>"; };
 		2F49942928652B7000CEB5D0 /* SystemIconButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SystemIconButton.swift; sourceTree = "<group>"; };
 		2F49942B28652BB500CEB5D0 /* Settings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
 		2F49942D28652BF600CEB5D0 /* Color+system.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Color+system.swift"; sourceTree = "<group>"; };
+		2F49943928653E3600CEB5D0 /* ARViewContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARViewContainer.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,32 +108,14 @@
 			isa = PBXGroup;
 			children = (
 				2F4993E62865194B00CEB5D0 /* arMapApp.swift */,
-				2F4993E82865194B00CEB5D0 /* ContentView.swift */,
-				2F49942728652B6000CEB5D0 /* ARControls.swift */,
-				2F4993F728651C5400CEB5D0 /* ARSessionManager.swift */,
-				2F49940B2865233F00CEB5D0 /* ARSessionManager+delegates.swift */,
-				2F49940D2865246700CEB5D0 /* ARSessionManager+anchorManagement.swift */,
-				2F4994172865251300CEB5D0 /* ARSessionManager+gestures.swift */,
-				2F4993F928651E3200CEB5D0 /* LBSManager.swift */,
-				2F4993FE2865207500CEB5D0 /* FocusedARView.swift */,
-				2F4994032865219100CEB5D0 /* UserDefault.swift */,
-				2F499407286521FC00CEB5D0 /* UserDefaultsConfig.swift */,
-				2F499405286521D000CEB5D0 /* UserDefaults+savabale.swift */,
-				2F4994092865226E00CEB5D0 /* LocalDataManager.swift */,
-				2F49940F286524CB00CEB5D0 /* AnnotationComponent.swift */,
-				2F499410286524CB00CEB5D0 /* AnnotationEntity.swift */,
-				2F499411286524CB00CEB5D0 /* AnnotationView.swift */,
-				2F499415286524FF00CEB5D0 /* ARView+meshRay.swift */,
-				2F4994192865273000CEB5D0 /* ModelEntity+simpleModels.swift */,
-				2F49941B2865275B00CEB5D0 /* CLLocationCoordinate+description.swift */,
-				2F49941D2865279100CEB5D0 /* Transform+helpers.swift */,
-				2F49942D28652BF600CEB5D0 /* Color+system.swift */,
-				2F49941F28652ABA00CEB5D0 /* Slider.swift */,
-				2F49942B28652BB500CEB5D0 /* Settings.swift */,
-				2F49942128652AC500CEB5D0 /* SettingsGrid.swift */,
-				2F49942928652B7000CEB5D0 /* SystemIconButton.swift */,
-				2F49942528652AFE00CEB5D0 /* SettingsToggleButton.swift */,
-				2F49942328652AEC00CEB5D0 /* Separator.swift */,
+				2F49943628653DF400CEB5D0 /* Persistence */,
+				2F49943128653D8200CEB5D0 /* Model */,
+				2F49943028653D7700CEB5D0 /* ViewModel */,
+				2F49942F28653D6B00CEB5D0 /* View */,
+				2F49943828653E1600CEB5D0 /* AR */,
+				2F49943328653DB800CEB5D0 /* UIComponents */,
+				2F49943428653DD000CEB5D0 /* Extensions */,
+				2F49943228653D8D00CEB5D0 /* UIKit */,
 				2F4993EA2865194D00CEB5D0 /* Assets.xcassets */,
 				2F4993EC2865194D00CEB5D0 /* Preview Content */,
 			);
@@ -144,6 +128,105 @@
 				2F4993ED2865194D00CEB5D0 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		2F49942F28653D6B00CEB5D0 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				2F4993E82865194B00CEB5D0 /* ContentView.swift */,
+				2F49942128652AC500CEB5D0 /* SettingsView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		2F49943028653D7700CEB5D0 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				2F49943B28653E9600CEB5D0 /* ARSessionManager */,
+				2F4993F928651E3200CEB5D0 /* LBSManager.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		2F49943128653D8200CEB5D0 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				2F49942B28652BB500CEB5D0 /* Settings.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		2F49943228653D8D00CEB5D0 /* UIKit */ = {
+			isa = PBXGroup;
+			children = (
+				2F49943528653DDF00CEB5D0 /* Annotation */,
+			);
+			path = UIKit;
+			sourceTree = "<group>";
+		};
+		2F49943328653DB800CEB5D0 /* UIComponents */ = {
+			isa = PBXGroup;
+			children = (
+				2F49941F28652ABA00CEB5D0 /* Slider.swift */,
+				2F49942928652B7000CEB5D0 /* SystemIconButton.swift */,
+				2F49942528652AFE00CEB5D0 /* SettingsToggleButton.swift */,
+				2F49942328652AEC00CEB5D0 /* Separator.swift */,
+			);
+			path = UIComponents;
+			sourceTree = "<group>";
+		};
+		2F49943428653DD000CEB5D0 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				2F499415286524FF00CEB5D0 /* ARView+meshRay.swift */,
+				2F4994192865273000CEB5D0 /* ModelEntity+simpleModels.swift */,
+				2F49941B2865275B00CEB5D0 /* CLLocationCoordinate+description.swift */,
+				2F49941D2865279100CEB5D0 /* Transform+helpers.swift */,
+				2F49942D28652BF600CEB5D0 /* Color+system.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		2F49943528653DDF00CEB5D0 /* Annotation */ = {
+			isa = PBXGroup;
+			children = (
+				2F49940F286524CB00CEB5D0 /* AnnotationComponent.swift */,
+				2F499410286524CB00CEB5D0 /* AnnotationEntity.swift */,
+				2F499411286524CB00CEB5D0 /* AnnotationView.swift */,
+			);
+			path = Annotation;
+			sourceTree = "<group>";
+		};
+		2F49943628653DF400CEB5D0 /* Persistence */ = {
+			isa = PBXGroup;
+			children = (
+				2F4994092865226E00CEB5D0 /* LocalDataManager.swift */,
+				2F4994032865219100CEB5D0 /* UserDefault.swift */,
+				2F499407286521FC00CEB5D0 /* UserDefaultsConfig.swift */,
+				2F499405286521D000CEB5D0 /* UserDefaults+savabale.swift */,
+			);
+			path = Persistence;
+			sourceTree = "<group>";
+		};
+		2F49943828653E1600CEB5D0 /* AR */ = {
+			isa = PBXGroup;
+			children = (
+				2F49942728652B6000CEB5D0 /* ARControls.swift */,
+				2F49943928653E3600CEB5D0 /* ARViewContainer.swift */,
+				2F4993FE2865207500CEB5D0 /* FocusedARView.swift */,
+			);
+			path = AR;
+			sourceTree = "<group>";
+		};
+		2F49943B28653E9600CEB5D0 /* ARSessionManager */ = {
+			isa = PBXGroup;
+			children = (
+				2F4993F728651C5400CEB5D0 /* ARSessionManager.swift */,
+				2F49940B2865233F00CEB5D0 /* ARSessionManager+delegates.swift */,
+				2F49940D2865246700CEB5D0 /* ARSessionManager+anchorManagement.swift */,
+				2F4994172865251300CEB5D0 /* ARSessionManager+gestures.swift */,
+			);
+			path = ARSessionManager;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -241,12 +324,13 @@
 				2F4993F828651C5400CEB5D0 /* ARSessionManager.swift in Sources */,
 				2F499406286521D000CEB5D0 /* UserDefaults+savabale.swift in Sources */,
 				2F49941C2865275B00CEB5D0 /* CLLocationCoordinate+description.swift in Sources */,
+				2F49943A28653E3600CEB5D0 /* ARViewContainer.swift in Sources */,
 				2F49942428652AED00CEB5D0 /* Separator.swift in Sources */,
 				2F49941A2865273000CEB5D0 /* ModelEntity+simpleModels.swift in Sources */,
 				2F49942028652ABA00CEB5D0 /* Slider.swift in Sources */,
 				2F49942E28652BF600CEB5D0 /* Color+system.swift in Sources */,
 				2F4993FA28651E3300CEB5D0 /* LBSManager.swift in Sources */,
-				2F49942228652AC500CEB5D0 /* SettingsGrid.swift in Sources */,
+				2F49942228652AC500CEB5D0 /* SettingsView.swift in Sources */,
 				2F49941E2865279100CEB5D0 /* Transform+helpers.swift in Sources */,
 				2F499412286524CB00CEB5D0 /* AnnotationComponent.swift in Sources */,
 				2F4993FF2865207500CEB5D0 /* FocusedARView.swift in Sources */,

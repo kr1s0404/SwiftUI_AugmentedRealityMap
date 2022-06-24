@@ -6,9 +6,6 @@
 //
 
 import SwiftUI
-import RealityKit
-import ARKit
-import LocationBasedAR
 
 struct ContentView: View
 {
@@ -33,7 +30,7 @@ struct ContentView: View
                 ]
             )
         }
-        .onAppear(perform: {
+        .onAppear {
             
             // imitate loading
             DispatchQueue.main.asyncAfter(deadline: .now() + 3) {
@@ -44,10 +41,10 @@ struct ContentView: View
             
             locationManager.onLocationChanged = arSessionManager.receive(location:)
             arSessionManager.configure(locationManager)
-        })
-        .onDisappear(perform: {
+        }
+        .onDisappear {
             locationManager.stop()
-        })
+        }
         .ignoresSafeArea()
     }
 }
@@ -60,29 +57,4 @@ struct ContentView_Previews: PreviewProvider
     }
 }
 
-struct ARViewContainer: UIViewRepresentable
-{
-    @EnvironmentObject var vm: ARSessionManager
-    
-    func makeUIView(context: Context) -> FocusedARView {
-        let arView = vm.arView
-        
-        self.vm.sceneObserver = arView.scene.subscribe(to: SceneEvents.Update.self) { event in
-            self.updateScene(for: arView)
-        }
-        
-        return arView
-    }
-    
-    func updateUIView(_ uiView: FocusedARView, context: Context) {
-        
-    }
-    
-    private func updateScene(for arView: FocusedARView) {
-        
-        self.vm.updateAnnotations()
-    }
-    
-    typealias UIViewType = FocusedARView
-    
-}
+

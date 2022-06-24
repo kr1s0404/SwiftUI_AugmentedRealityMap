@@ -1,8 +1,8 @@
 //
 //  ARSessionManager+gestures.swift
-//  ARCLDemo
+//  arMap
 //
-//  Created by Miron Rogovets on 02.06.2021.
+//  Created by Kris on 6/24/22.
 //
 
 import Foundation

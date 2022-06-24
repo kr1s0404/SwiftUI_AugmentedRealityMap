@@ -1,8 +1,8 @@
 //
 //  AnnotationEntity.swift
-//  ARCLDemo
+//  arMap
 //
-//  Created by Miron Rogovets on 01.06.2021.
+//  Created by Kris on 6/24/22.
 //
 
 import ARKit
