@@ -7,13 +7,17 @@
 
 import SwiftUI
 
-struct SystemIconButton: View {
+struct SystemIconButton: View
+{
     
     let systemIconName: String
     let action: () -> Void
     
-    var body: some View {
-        Button(action: { self.action() }) {
+    var body: some View
+    {
+        Button {
+            self.action()
+        } label: {
             Image(systemName: systemIconName)
                 .font(.title)
                 .padding()

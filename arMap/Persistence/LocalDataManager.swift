@@ -9,13 +9,13 @@ import Foundation
 import CoreLocation
 import LocationBasedAR
 
-public struct LocationData: Codable, Equatable {
+public struct LocationData: Codable, Equatable
+{
     let id: String?
     let name: String?
     let latitude: CLLocationDegrees
     let longitude: CLLocationDegrees
     let accuracy: CLLocationAccuracy
-    
 }
 
 

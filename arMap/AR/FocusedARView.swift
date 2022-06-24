@@ -11,7 +11,8 @@ import RealityKit
 import FocusEntity
 import LocationBasedAR
 
-class FocusedARView: LBARView {
+class FocusedARView: LBARView
+{
     
     var focusEntity: FocusEntity?
     
@@ -26,7 +27,8 @@ class FocusedARView: LBARView {
     }
 }
 
-extension FocusEntity {
+extension FocusEntity
+{
     var publicLastPosition: float4x4? {
         switch state {
         case .initializing: return nil

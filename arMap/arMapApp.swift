@@ -10,16 +10,16 @@ import SwiftUI
 @main
 struct arMapApp: App
 {
-    @StateObject var vm = ARSessionManager()
-    @StateObject var vm2 = LBSManager()
+    @StateObject var arSessionManager = ARSessionManager()
+    @StateObject var locationManager = LBSManager()
     
     var body: some Scene
     {
         WindowGroup
         {
             ContentView()
-                .environmentObject(vm)
-                .environmentObject(vm2)
+                .environmentObject(arSessionManager)
+                .environmentObject(locationManager)
         }
     }
 }

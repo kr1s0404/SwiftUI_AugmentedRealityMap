@@ -7,28 +7,33 @@
 
 import SwiftUI
 
-struct ARControls: View {
+struct ARControls: View
+{
     
     @State var isSettingVisible: Bool = false
     
-    var body: some View {
-        VStack {
+    var body: some View
+    {
+        VStack
+        {
             BottomControlBar(showSettings: $isSettingVisible)
         }
     }
 }
 
-struct BottomControlBar: View {
+struct BottomControlBar: View
+{
     
     @EnvironmentObject var arSessionManager: ARSessionManager
 
     @Binding var showSettings: Bool
     
-    var body: some View {
-        HStack {
+    var body: some View
+    {
+        HStack
+        {
             
             Spacer()
-            
             
             Spacer()
             
@@ -48,10 +53,10 @@ struct BottomControlBar: View {
 }
 
 
-
-
-struct ARControls_Previews: PreviewProvider {
-    static var previews: some View {
+struct ARControls_Previews: PreviewProvider
+{
+    static var previews: some View
+    {
         ARControls()
     }
 }

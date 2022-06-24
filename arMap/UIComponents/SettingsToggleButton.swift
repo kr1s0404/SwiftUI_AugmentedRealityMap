@@ -7,17 +7,20 @@
 
 import SwiftUI
 
-struct SettingsToggleButton: View {
+struct SettingsToggleButton: View
+{
     
     let setting: Setting
     @Binding var isOn: Bool
     
-    var body: some View {
-        Button(action: {
+    var body: some View
+    {
+        Button {
             self.isOn.toggle()
-            print("\(#file) -- \(setting): \(self.isOn)")
-        }) {
-            VStack {
+            print("DEBUG: \(setting): \(self.isOn)")
+        } label: {
+            VStack
+            {
                 Image(systemName: setting.systemIconName)
                     .font(.title)
                     .foregroundColor(self.isOn ? Color(.systemGreen) : Color(.secondaryLabel))

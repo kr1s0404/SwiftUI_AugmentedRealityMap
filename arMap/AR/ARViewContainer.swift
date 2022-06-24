@@ -12,12 +12,12 @@ import LocationBasedAR
 
 struct ARViewContainer: UIViewRepresentable
 {
-    @EnvironmentObject var vm: ARSessionManager
+    @EnvironmentObject var arSessionManager: ARSessionManager
     
     func makeUIView(context: Context) -> FocusedARView {
-        let arView = vm.arView
+        let arView = arSessionManager.arView
         
-        self.vm.sceneObserver = arView.scene.subscribe(to: SceneEvents.Update.self) { event in
+        self.arSessionManager.sceneObserver = arView.scene.subscribe(to: SceneEvents.Update.self) { event in
             self.updateScene(for: arView)
         }
         
@@ -30,7 +30,7 @@ struct ARViewContainer: UIViewRepresentable
     
     private func updateScene(for arView: FocusedARView) {
         
-        self.vm.updateAnnotations()
+        self.arSessionManager.updateAnnotations()
     }
     
     typealias UIViewType = FocusedARView

@@ -14,7 +14,8 @@ struct ContentView: View
     
     var body: some View
     {
-        ZStack(alignment: .bottom) {
+        ZStack(alignment: .bottom)
+        {
             ARViewContainer()
             ARControls()
         }
