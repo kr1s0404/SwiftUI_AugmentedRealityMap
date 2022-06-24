@@ -1,0 +1,25 @@
+{
+  "object": {
+    "pins": [
+      {
+        "package": "FocusEntity",
+        "repositoryURL": "https://github.com/maxxfrazer/FocusEntity",
+        "state": {
+          "branch": "main",
+          "revision": "a3363f33321843d49352bd0e3d99e66a6560665c",
+          "version": null
+        }
+      },
+      {
+        "package": "LBAR",
+        "repositoryURL": "https://github.com/Mist3r-R/location-based-ar.git",
+        "state": {
+          "branch": "master",
+          "revision": "61c72da2cbcfe19e014b8e15d2879631ecfcdcb4",
+          "version": null
+        }
+      }
+    ]
+  },
+  "version": 1
+}
