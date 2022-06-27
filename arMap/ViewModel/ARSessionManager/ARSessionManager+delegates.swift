@@ -123,3 +123,14 @@ extension ARSessionManager: ARSessionDelegate {
         
     }
 }
+
+
+extension ARSessionManager {
+    
+    func presentMessage(_ notification: NotificationMessage) {
+        self.notification = NotificationWrapper(notification: notification)
+        DispatchQueue.main.asyncAfter(deadline: .now() + 3) {
+            self.notification = nil
+        }
+    }
+}

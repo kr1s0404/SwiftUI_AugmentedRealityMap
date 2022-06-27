@@ -16,6 +16,7 @@ class ARSessionManager: NSObject, ObservableObject
 {
     @Published var arView: FocusedARView = FocusedARView(frame: .zero)
     @Published var selectedAnchor: LocationAnchorData? = nil
+    @Published var notification: NotificationWrapper? = nil
     
     var sceneObserver: Cancellable?
     
@@ -28,12 +29,14 @@ class ARSessionManager: NSObject, ObservableObject
         
         showAnnotations = UserDefaultsConfig.isAnnotationsPreferred
         distanceFilterValue = UserDefaultsConfig.distanceFilterValue
+        allowTap = UserDefaultsConfig.isARTapEnabled
         
         super.init()
         
         self.arView.session.delegate = self
         self.arView.delegate = self
         self.arView.locationUpdateFilter = 0.5
+        self.initGestures()
         self.startSession()
         
         UIApplication.shared.isIdleTimerDisabled = true
@@ -72,6 +75,10 @@ class ARSessionManager: NSObject, ObservableObject
             UserDefaultsConfig.distanceFilterValue = newValue
             self.arView.displayRangeFilter = newValue
         }
+    }
+    
+    @Published var allowTap: Bool {
+        willSet(newValue) { UserDefaultsConfig.isARTapEnabled = newValue }
     }
     
     private func run(_ configuration: ARWorldTrackingConfiguration, options: ARSession.RunOptions = []) {

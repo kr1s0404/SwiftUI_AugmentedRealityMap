@@ -17,6 +17,9 @@ public struct UserDefaultsConfig
     @UserDefault("distance-filter-setting", defaultValue: 1000.0)
     public static var distanceFilterValue: Double
     
+    @UserDefault("ar-tap-setting", defaultValue: false)
+    public static var isARTapEnabled: Bool
+    
     @OptionalCodableUserDefault("saved-locations", defaultValue: [])
     public static var savedLocations: [LocationData]?
     

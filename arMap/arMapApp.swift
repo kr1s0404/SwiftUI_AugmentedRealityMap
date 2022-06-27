@@ -6,12 +6,17 @@
 //
 
 import SwiftUI
+import Firebase
 
 @main
 struct arMapApp: App
 {
     @StateObject var arSessionManager = ARSessionManager()
     @StateObject var locationManager = LBSManager()
+    
+    init() {
+        FirebaseApp.configure()
+    }
     
     var body: some Scene
     {

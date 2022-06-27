@@ -48,6 +48,7 @@ struct SettingsGrid: View
                 
                 LazyVGrid(columns: gridItemLayout, spacing: 25) {
                     SettingsToggleButton(setting: .annotations, isOn: $arSessionManager.showAnnotations)
+                    SettingsToggleButton(setting: .arInput, isOn: $arSessionManager.allowTap)
                 }
                 
                 SliderControl(label: "Distance Filter", value: $arSessionManager.distanceFilterValue)

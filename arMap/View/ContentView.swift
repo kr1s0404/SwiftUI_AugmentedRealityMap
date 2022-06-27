@@ -24,7 +24,7 @@ struct ContentView: View
                 title: Text(locationAnchor.title),
                 message: Text(locationAnchor.stringDescription),
                 buttons: [
-                    .destructive(Text("Remove"), action: {
+                    .destructive(Text("移除"), action: {
                         self.arSessionManager.delete(anchorData: locationAnchor)
                     }),
                     .cancel()
@@ -36,7 +36,9 @@ struct ContentView: View
             // imitate loading
             DispatchQueue.main.asyncAfter(deadline: .now() + 3) {
                 self.arSessionManager.loadCachedAnchors()
-            } 
+            }
+            
+            
             
             locationManager.start()
             

@@ -8,30 +8,45 @@
 import Foundation
 import CoreLocation
 import LocationBasedAR
+import Firebase
 
-public struct LocationData: Codable, Equatable
+
+class LocalDataManager: ObservableObject
 {
-    let id: String?
-    let name: String?
-    let latitude: CLLocationDegrees
-    let longitude: CLLocationDegrees
-    let accuracy: CLLocationAccuracy
-}
-
-
-class LocalDataManager
-{
-    let defaultLocations = [
-        Placemark(
-            coordinate: CLLocationCoordinate2D(latitude: 24.1786683, longitude: 120.6469363),
-            accuracy: 0, placeName: "行政大樓"
-        )
-    ]
+    let defaultLocations = [Placemark]()
+    
+    @Published var locations = [Placemark]()
     
     static var shared = LocalDataManager()
     
     private init() {
         print(UserDefaultsConfig.description)
+        fetch()
+    }
+    
+    func fetch() {
+        let db = Firestore.firestore()
+        
+        db.collection("locations").getDocuments { (snapshot, error) in
+            
+            if let error = error {
+                print(error)
+                return
+            }
+            
+            if let snapshot = snapshot {
+                DispatchQueue.main.async {
+                    self.locations = snapshot.documents.map { d in
+                        
+                        let point = d["coordinate"] as! GeoPoint
+                        
+                        return Placemark(location: CLLocation(latitude: point.latitude , longitude: point.longitude),
+                                         placeName: d["placeName"] as? String ?? "")
+                    }
+                    print(self.locations)
+                }
+            }
+        }
     }
     
     func clearCache() {

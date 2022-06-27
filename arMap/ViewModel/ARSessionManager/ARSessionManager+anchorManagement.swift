@@ -111,7 +111,7 @@ extension ARSessionManager {
         
         if cached.isEmpty || cached.count > 50 {
             LocalDataManager.shared.clearCache()
-             placemarks = LocalDataManager.shared.defaultLocations
+             placemarks = LocalDataManager.shared.locations
         } else {
             placemarks = cached.compactMap({
                 guard $0.accuracy < 3 else { return nil }
